@@ -1,0 +1,89 @@
+/* Buttons */
+
+button{
+    appearance: none;
+    border: 0;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    border-radius: 3px;
+    text-decoration: none;
+    font-family: $roboto-medium;
+    transition: $transition;
+    &.spaced{
+        margin: 0 10px;
+        + a {
+            margin-top: 20px;
+        }
+    }
+    + a {
+        margin-top: 20px;
+    }
+
+}
+.btn-primary{
+    padding: 16px 27px 16px 22px;
+    background: $blue;
+    color: #fff;
+    font-size: 1.8rem;
+    &.btn-icon{
+        .icon{
+            margin-right: 20px;
+        }
+    }
+    &:hover, &:focus {
+        background: $bluedark;
+        color: #ffffff;
+    }
+}
+.btn-secondary {
+    padding: 8px 27px 8px 22px;
+    border: 2px solid $bluedarker;
+    background: #fff;
+    color: $blue;
+    font-size: 1.6rem;
+    &.btn-icon{
+        .icon{
+            margin-right: 12px;
+        }
+    }
+    &:hover, &:focus {
+        background: $bluedarker;
+        color: #ffffff;
+    }
+    &.brown{
+        color: $brown;
+        border: 2px solid $brown;
+        &:hover, &:focus {
+            background: $brown;
+            color: #ffffff;
+        }
+    }
+    &.white{
+        color: $white;
+        border: 2px solid $white;
+        background: transparent;
+        &:hover, &:focus {
+            background: transparent;
+            color: $white;
+        }
+    }
+}
+.btn-icon{
+    .icon{
+        display: inline-block;
+        vertical-align: middle;
+        top: -0.1em;
+        position: relative;
+        &.icon-envelope{
+            width: 30px;
+            height: 20px;
+        }
+        &.icon-arrow{
+            width: 8px;
+            height: 9px;
+        }
+    }
+}

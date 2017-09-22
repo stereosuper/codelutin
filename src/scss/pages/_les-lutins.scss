@@ -1,0 +1,497 @@
+.game-viewport {
+    .no-js & {
+        display: none;
+    }
+    position: relative;
+    margin-top: 151px;
+    cursor: none;
+    height: calc(100vh - 151px);
+    width: 100vw;
+    > .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    overflow: hidden;
+}
+
+.game{
+    footer{
+        display: none;
+        .no-js & {
+            display: block;
+        }
+    }
+}
+
+.game-overlay{
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: 20;
+
+    padding-top: 120px;
+    text-align: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.98) 25%, rgba(255, 255, 255, 0.5));
+    cursor: default;
+}
+.game-overlay-title {
+    font-family: $roboto-light;
+    font-size: 4.5rem;
+    color: $orange;
+
+    line-height: 1;
+}
+.game-overlay-title-details {
+    margin-top: 5px;
+    font-family: $roboto-light;
+    font-size: 3.4rem;
+    color: $brown;
+
+    line-height: 1;
+}
+.game-overlay-info {
+    margin: 40px;
+}
+.game-overlay-buttons {
+    display: flex;
+    justify-content: center;
+}
+.game-overlay.hide{ display:none; }
+
+
+.game-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: $roboto-light;
+    font-size: 3.2rem;
+
+    color: $brown;
+}
+.game-meta.hide {
+    display: none;
+}
+.score {}
+.lives {
+    width: 370px;
+}
+.live {
+    width:20px;
+    height: 35px;
+}
+
+.hammer{
+    transform: rotate(18deg);
+    position: absolute;
+    width: 130px;
+    height: 150px;
+    left: 50%;
+    transform-origin: 54px 97%;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.hammer.hide {
+    display: none;
+}
+
+.wrapper-hole{
+    position: relative;
+    padding-top: 116px;
+    height: 189px;
+    &:after{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        background-color: white;
+        bottom: -25px;
+        height: 20px;
+        left: 0;
+        right: 0;
+        z-index: 3;
+    }
+}
+
+.stars{
+    position: absolute;
+    width: 20px;
+    z-index: 9;
+    top: -58px;
+    left: 50%;
+}
+
+.paf-hats{
+    position: absolute;
+    z-index: 8;
+    width: 83px;
+    top: -34px;
+    left: 26px;
+}
+
+.paf-hands{
+    position: absolute;
+    width: 188px;
+    top: -53px;
+    left: -28px;
+    z-index: 5;
+}
+
+.pif, .pouf{
+    position: absolute;
+    transform: scale(1);
+    top: -49px;
+    z-index: 6;
+    width: 130px;
+}
+.pouf{
+    z-index: 7;
+}
+
+.paf{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    transform: translate3d(0,0,0);
+    display: none;
+
+    z-index: 5;
+    &.show{
+      display: block;
+    }
+}
+
+.lutin-game {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    pointer-events: none;
+    &.hide {
+      display: none;
+    }
+    &.small-head{
+        .hats{
+            top: -139px;
+        }
+        .heads{
+            top: -109px;
+        }
+    }
+}
+
+.hats{
+    position: absolute;
+    top: -148px;
+    width: 176px;
+    left: -8px;
+}
+
+.heads{
+    position: absolute;
+    width: 95px;
+    top: -116px;
+    right: 15px;
+    z-index: 4;
+    transform-origin: 0 50%;
+}
+
+.bodies{
+    width: 126px;
+    position: absolute;
+    top: -57px;
+    left: 7px;
+    transform-origin: 0 50%;
+}
+
+
+
+.lutin-full {
+    transform: translate3d(0,0,0);
+    position: relative;
+    flex: 1;
+    &.small-head svg:last-child{
+        top: -10px;
+    }
+    .head-full{
+        top: -59px;
+        width: 115px;
+        left: 54px;
+        height: 175px;
+    }
+    svg {
+        position: absolute;
+        &:first-child{
+            top: -98px;
+            width: 221px;
+            left: 18px;
+            height: 175px;
+        }
+        &:last-child{
+            width: 230px;
+            height: 300px;
+            z-index: -1;
+        }
+    }
+}
+
+.card-wrapper{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+    cursor: default;
+    z-index: 20;
+}
+
+.card-info {
+    position: relative;
+    width: 50%;
+    padding: 50px 30px 15px 0;
+}
+
+.card-info-hammered {
+    font-family: $roboto-italic;
+}
+
+.card-info-name{
+    display: block;
+    font-family: $roboto-bold;
+    font-size: 3.6rem;
+    color: $orange;
+    line-height: 1;
+    margin: 10px 0;
+}
+
+.card-info-links {
+    margin-top: 10px;
+}
+
+.identity-card-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.identity-card {
+    position: relative;
+    display: flex;
+    width: 500px;
+    height: 300px;
+    border-radius: 3px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    cursor: default;
+    &:after{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 3px;
+        background: #d9d9d9;
+        top: 15px;
+        right: 15px;
+        z-index: -1;
+    }
+}
+
+.button--wired{
+    position: relative;
+    margin: 0 50px;
+    padding: 10px 20px 10px 40px;
+    border-radius: 3px;
+    border: 2px solid $blue;
+    color: $blue;
+    background: rgba(255, 255, 255, 0.3);
+    font-family: $roboto-medium;
+    text-align: left;
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        width: 7px;
+        height: 2px;
+        background: $blue;
+        transition: 0.2s ease-in-out;
+    }
+    &:before{
+        transform: rotate(140deg);
+        top: 22px;
+        left: 19px;
+    }
+    &:after{
+        transform: rotate(-140deg);
+        top: 18px;
+        left: 19px;
+    }
+    &:hover{
+        &:before{
+            transform: translateX(8px) rotate(140deg);
+        }
+        &:after{
+            transform: translateX(8px) rotate(-140deg);
+        }
+    }
+}
+
+.button--wired.invert{
+    padding: 10px 35px 10px 15px;
+    &:before{
+        transform: rotate(40deg);
+        top: 23px;
+        right: 19px;
+        left: inherit;
+    }
+    &:after{
+        transform: rotate(-40deg);
+        top: 19px;
+        right: 19px;
+        left: inherit;
+    }
+    &:hover{
+        &:before{
+            transform: translateX(-8px) rotate(40deg);
+        }
+        &:after{
+            transform: translateX(-8px) rotate(-40deg);
+        }
+    }
+}
+
+.button{}
+.button.hide {
+    display: none;
+}
+.button--wired.inline {
+    margin: 0 10px
+}
+
+.button--filled{
+    position: relative;
+    margin: 30px 0 0;
+    padding: 10px 25px 10px 25px;
+    border-radius: 3px;
+    background-color: $blue;
+    color: $white;
+    font-family: $roboto-bold;
+    &:hover {
+        background-color: $bluedark;
+    }
+}
+.button--goBack {
+    padding-left: 35px;
+    &:before{
+        content: '';
+        position: absolute;
+        top: 16px;
+        left: 19px;
+        width: 2px;
+        height: 10px;
+        background-color: #fff;
+        transform: rotate(45deg);
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        width: 10px;
+        height: 2px;
+        background-color: #fff;
+        transform: rotate(45deg);
+    }
+}
+
+// NO JS VERSION
+.lutin-grid{
+    display: none;
+    .no-js & {
+        display: block;
+    }
+    ul{
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        flex-wrap: wrap;
+        width: calc(100% + 9%);
+        margin: 25px 0 0 -4.5%;
+        > li {
+            display: flex;
+            align-items: center;
+            width: 24%;
+            width: 230px;
+            margin: 50px 4.5%;
+            &:before{
+                content: none;
+            }
+        }
+    }
+    .lutin-name{
+        display: block;
+        font-family: $roboto-bold;
+        font-size: 2rem;
+        color: $orange;
+        margin: 0 0 10px;
+    }
+    .poste{
+        font-size: 1.4rem;
+    }
+    svg {
+        position: absolute;
+        height: auto;
+    }
+}
+
+.lutin-grid-head{
+    display: none;
+    .no-js & {
+        display: block;
+    }
+}
+
+.lutin-wrap{
+    position: relative;
+    height: 150px;
+    width: 70px;
+    margin: 0 20px 0 0;
+    transform: translate3d(0,0,0);
+    &.shead{
+        .head{
+            top: 26px;
+        }
+        .hat{
+            top: -11px;
+        }
+    }
+    .hat {
+       width: 115px;
+       height: 92px;
+       left: -22px;
+       top: -17px;
+    }
+    .head{
+        width: 70px;
+        top: 20px;
+        left: -7px;
+        height: 60px;
+    }
+    .stand-body{
+        width: 119px;
+        z-index: -1;
+        height: 139px;
+        top: 45px;
+        left: -29px;
+    }
+}
+
+.lutin-info{
+    flex: 1 1 0%;
+}

@@ -1,0 +1,69 @@
+/* Grid */
+
+.container{
+    max-width: 1240px;
+    padding: 0 $gutter*2;
+    margin: 0 auto;
+}
+
+.container-small{
+    max-width: 950px;
+    padding: 0 $gutter*2;
+    margin: 0 auto;
+}
+#main{
+    padding: 0 0 80px;
+    .home & {
+        padding: 110px 0 80px;
+    }
+    .game & {
+        padding: 0;
+    }
+}
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+
+    &.columns-2 {
+        .col {
+            width: calc(50% - 40px);
+            margin: 0 20px;
+        }
+    }
+    &.columns-3 {
+        .col {
+            width: calc(33.33% - 40px);
+            margin: 0 20px;
+        }
+    }
+}
+
+@media (max-width: $desktop-small){
+    .columns {
+        &.columns-3 {
+            flex-direction: column;
+            width: 100%;
+            margin-left: 0;
+            .col {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet){
+    .columns {
+        &.columns-2 {
+            flex-direction: column;
+            width: 100%;
+            margin-left: 0;
+            .col {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+}

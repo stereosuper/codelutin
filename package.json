@@ -1,0 +1,39 @@
+{
+   "name": "code-lutin",
+   "version": "0.0.0",
+   "main": "gulpfile.js",
+   "dependencies": {
+      "babel-polyfill": "^6.26.0",
+      "scrollreveal": "^3.3.6"
+   },
+   "devDependencies": {
+      "babel-preset-es2015": "^6.24.1",
+      "babelify": "^7.3.0",
+      "browser-sync": "^2.18.12",
+      "browserify": "^14.4.0",
+      "del": "^3.0.0",
+      "gsap": "^1.20.2",
+      "gulp": "^3.9.1",
+      "gulp-autoprefixer": "^4.0.0",
+      "gulp-ext-replace": "^0.3.0",
+      "gulp-htmlmin": "^3.0.0",
+      "gulp-load-plugins": "^1.5.0",
+      "gulp-notify": "^3.0.0",
+      "gulp-prettify": "^0.5.0",
+      "gulp-sass": "^3.1.0",
+      "gulp-sitemap": "^4.2.0",
+      "gulp-size": "^2.1.0",
+      "gulp-sourcemaps": "^2.6.0",
+      "gulp-twig": "^0.7.0",
+      "gulp-uglify": "^3.0.0",
+      "gulp-watch": "^4.3.11",
+      "jquery-slim": "^3.0.0",
+      "path": "^0.12.7",
+      "vinyl-buffer": "^1.0.0",
+      "vinyl-source-stream": "^1.1.0"
+   },
+   "scripts": {
+      "start": "gulp start && gulp watch"
+   },
+   "license": "MIT"
+}

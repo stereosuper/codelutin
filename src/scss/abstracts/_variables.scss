@@ -1,0 +1,48 @@
+// Couleurs
+$txt: #111;
+$beige: #e5e4d2;
+$blue: #216695;
+$bluelight: #799db2;
+$bluedark: #023859;
+$bluedarker: #0c5a94;
+$orange: #cb5201;
+$brown : #513c33;
+
+// Dimensions
+$containeur-width: 1240 / 16 + 0em;
+
+// Colors
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+
+
+// Transitions
+$transition: 0.3s ease-in-out;
+
+
+
+
+// Fonts
+$roboto: 'roboto', sans-serif;
+$roboto-italic: 'roboto-italic', $roboto;
+$roboto-medium: 'roboto-medium', $roboto;
+$roboto-bold: 'roboto-bold', $roboto-medium;
+$roboto-black: 'roboto-black', $roboto-bold;
+$roboto-light: 'roboto-light', $roboto;
+$roboto-light-italic: 'roboto-light-italic', $roboto-light;
+
+
+// Mediaqueries
+$retina: 'only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi)';
+
+$desktop: '1100px';
+$desktop-small: '960px';
+$tablet: '780px';
+$phone: '580px';
+$phone-small: '400px';
+
+
+// Grid
+$col: 100/12*1%;
+
+$gutter: 20px;

@@ -1,0 +1,455 @@
+{% extends 'layout/game.html.twig' %}
+{% block body_attr %}class='game'{% endblock %}
+
+{% block content %}
+    <div class="game-viewport" data-ctrl="GameCtrl">
+        <div class="game-meta hide" data-ref="meta">
+            <div class="score" data-ctrl="ScoreCtrl"><span data-ref="scoreValue"></span> points</div>
+            &nbsp;|&nbsp;
+            <div class="lives" data-ctrl="LivesCtrl"></div>
+        </div>
+        <div class='container'>
+            <svg id="hammer" class="hammer" data-ctrl="HammerCtrl"><use xlink:href="#icon-hammer"></use></svg>
+            <div class='row-hole'>
+                <div class='wrapper-hole'>
+                    <div class='paf'>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="pouf"><use xlink:href="#icon-pouf"></use></svg>
+                        <svg class="pif"><use xlink:href="#icon-pif"></use></svg>
+                        <svg class="paf-hats"><use xlink:href="#icon-paf-hat"></use></svg>
+                        <svg class="paf-hands"><use xlink:href="#icon-paf-hands"></use></svg>
+                    </div>
+                    <div class='lutin-game hide'>
+                        <svg class="hats"><use xlink:href="#icon-hat"></use></svg>
+                        <svg class="heads"><use xlink:href="#icon-dcosse"></use></svg>
+                        <svg class="bodies"><use xlink:href="#icon-body"></use></svg>
+                    </div>
+                    <svg class="hole" data-ctrl="HoleCtrl"><use xlink:href="#icon-hole"></use></svg>
+                    <svg class="hole-masks"><use xlink:href="#icon-hole-mask"></use></svg>
+                </div>
+                <div class='wrapper-hole'>
+                    <div class='paf'>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="pouf"><use xlink:href="#icon-pouf"></use></svg>
+                        <svg class="pif"><use xlink:href="#icon-pif"></use></svg>
+                        <svg class="paf-hats"><use xlink:href="#icon-paf-hat"></use></svg>
+                        <svg class="paf-hands"><use xlink:href="#icon-paf-hands"></use></svg>
+                    </div>
+                    <div class='lutin-game hide'>
+                        <svg class="hats"><use xlink:href="#icon-hat"></use></svg>
+                        <svg class="heads"><use xlink:href="#icon-dcosse"></use></svg>
+                        <svg class="bodies"><use xlink:href="#icon-body"></use></svg>
+                    </div>
+                    <svg class="hole" data-ctrl="HoleCtrl"><use xlink:href="#icon-hole"></use></svg>
+                    <svg class="hole-masks"><use xlink:href="#icon-hole-mask"></use></svg>
+                </div>
+                <div class='wrapper-hole'>
+                    <div class='paf'>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="pouf"><use xlink:href="#icon-pouf"></use></svg>
+                        <svg class="pif"><use xlink:href="#icon-pif"></use></svg>
+                        <svg class="paf-hats"><use xlink:href="#icon-paf-hat"></use></svg>
+                        <svg class="paf-hands"><use xlink:href="#icon-paf-hands"></use></svg>
+                    </div>
+                    <div class='lutin-game hide'>
+                        <svg class="hats"><use xlink:href="#icon-hat"></use></svg>
+                        <svg class="heads"><use xlink:href="#icon-dcosse"></use></svg>
+                        <svg class="bodies"><use xlink:href="#icon-body"></use></svg>
+                    </div>
+                    <svg class="hole" data-ctrl="HoleCtrl"><use xlink:href="#icon-hole"></use></svg>
+                    <svg class="hole-masks"><use xlink:href="#icon-hole-mask"></use></svg>
+                </div>
+                <div class='wrapper-hole'>
+                    <div class='paf'>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="pouf"><use xlink:href="#icon-pouf"></use></svg>
+                        <svg class="pif"><use xlink:href="#icon-pif"></use></svg>
+                        <svg class="paf-hats"><use xlink:href="#icon-paf-hat"></use></svg>
+                        <svg class="paf-hands"><use xlink:href="#icon-paf-hands"></use></svg>
+                    </div>
+                    <div class='lutin-game hide'>
+                        <svg class="hats"><use xlink:href="#icon-hat"></use></svg>
+                        <svg class="heads"><use xlink:href="#icon-dcosse"></use></svg>
+                        <svg class="bodies"><use xlink:href="#icon-body"></use></svg>
+                    </div>
+                    <svg class="hole" data-ctrl="HoleCtrl"><use xlink:href="#icon-hole"></use></svg>
+                    <svg class="hole-masks"><use xlink:href="#icon-hole-mask"></use></svg>
+                </div>
+            </div>
+            <div class='row-hole'>
+                <div class='wrapper-hole'>
+                    <div class='paf'>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="pouf"><use xlink:href="#icon-pouf"></use></svg>
+                        <svg class="pif"><use xlink:href="#icon-pif"></use></svg>
+                        <svg class="paf-hats"><use xlink:href="#icon-paf-hat"></use></svg>
+                        <svg class="paf-hands"><use xlink:href="#icon-paf-hands"></use></svg>
+                    </div>
+                    <div class='lutin-game hide'>
+                        <svg class="hats"><use xlink:href="#icon-hat"></use></svg>
+                        <svg class="heads"><use xlink:href="#icon-dcosse"></use></svg>
+                        <svg class="bodies"><use xlink:href="#icon-body"></use></svg>
+                    </div>
+                    <svg class="hole" data-ctrl="HoleCtrl"><use xlink:href="#icon-hole"></use></svg>
+                    <svg class="hole-masks"><use xlink:href="#icon-hole-mask"></use></svg>
+                </div>
+                <div class='wrapper-hole'>
+                    <div class='paf'>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="pouf"><use xlink:href="#icon-pouf"></use></svg>
+                        <svg class="pif"><use xlink:href="#icon-pif"></use></svg>
+                        <svg class="paf-hats"><use xlink:href="#icon-paf-hat"></use></svg>
+                        <svg class="paf-hands"><use xlink:href="#icon-paf-hands"></use></svg>
+                    </div>
+                    <div class='lutin-game hide'>
+                        <svg class="hats"><use xlink:href="#icon-hat"></use></svg>
+                        <svg class="heads"><use xlink:href="#icon-dcosse"></use></svg>
+                        <svg class="bodies"><use xlink:href="#icon-body"></use></svg>
+                    </div>
+                    <svg class="hole" data-ctrl="HoleCtrl"><use xlink:href="#icon-hole"></use></svg>
+                    <svg class="hole-masks"><use xlink:href="#icon-hole-mask"></use></svg>
+                </div>
+                <div class='wrapper-hole'>
+                    <div class='paf'>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="pouf"><use xlink:href="#icon-pouf"></use></svg>
+                        <svg class="pif"><use xlink:href="#icon-pif"></use></svg>
+                        <svg class="paf-hats"><use xlink:href="#icon-paf-hat"></use></svg>
+                        <svg class="paf-hands"><use xlink:href="#icon-paf-hands"></use></svg>
+                    </div>
+                    <div class='lutin-game hide'>
+                        <svg class="hats"><use xlink:href="#icon-hat"></use></svg>
+                        <svg class="heads"><use xlink:href="#icon-dcosse"></use></svg>
+                        <svg class="bodies"><use xlink:href="#icon-body"></use></svg>
+                    </div>
+                    <svg class="hole" data-ctrl="HoleCtrl"><use xlink:href="#icon-hole"></use></svg>
+                    <svg class="hole-masks"><use xlink:href="#icon-hole-mask"></use></svg>
+                </div>
+                <div class='wrapper-hole'>
+                    <div class='paf'>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="pouf"><use xlink:href="#icon-pouf"></use></svg>
+                        <svg class="pif"><use xlink:href="#icon-pif"></use></svg>
+                        <svg class="paf-hats"><use xlink:href="#icon-paf-hat"></use></svg>
+                        <svg class="paf-hands"><use xlink:href="#icon-paf-hands"></use></svg>
+                    </div>
+                    <div class='lutin-game hide'>
+                        <svg class="hats"><use xlink:href="#icon-hat"></use></svg>
+                        <svg class="heads"><use xlink:href="#icon-dcosse"></use></svg>
+                        <svg class="bodies"><use xlink:href="#icon-body"></use></svg>
+                    </div>
+                    <svg class="hole" data-ctrl="HoleCtrl"><use xlink:href="#icon-hole"></use></svg>
+                    <svg class="hole-masks"><use xlink:href="#icon-hole-mask"></use></svg>
+                </div>
+                <div class='wrapper-hole'>
+                    <div class='paf'>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="pouf"><use xlink:href="#icon-pouf"></use></svg>
+                        <svg class="pif"><use xlink:href="#icon-pif"></use></svg>
+                        <svg class="paf-hats"><use xlink:href="#icon-paf-hat"></use></svg>
+                        <svg class="paf-hands"><use xlink:href="#icon-paf-hands"></use></svg>
+                    </div>
+                    <div class='lutin-game hide'>
+                        <svg class="hats"><use xlink:href="#icon-hat"></use></svg>
+                        <svg class="heads"><use xlink:href="#icon-dcosse"></use></svg>
+                        <svg class="bodies"><use xlink:href="#icon-body"></use></svg>
+                    </div>
+                    <svg class="hole" data-ctrl="HoleCtrl"><use xlink:href="#icon-hole"></use></svg>
+                    <svg class="hole-masks"><use xlink:href="#icon-hole-mask"></use></svg>
+                </div>
+            </div>
+            <div class='row-hole'>
+                <div class='wrapper-hole'>
+                    <div class='paf'>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="pouf"><use xlink:href="#icon-pouf"></use></svg>
+                        <svg class="pif"><use xlink:href="#icon-pif"></use></svg>
+                        <svg class="paf-hats"><use xlink:href="#icon-paf-hat"></use></svg>
+                        <svg class="paf-hands"><use xlink:href="#icon-paf-hands"></use></svg>
+                    </div>
+                    <div class='lutin-game hide'>
+                        <svg class="hats"><use xlink:href="#icon-hat"></use></svg>
+                        <svg class="heads"><use xlink:href="#icon-dcosse"></use></svg>
+                        <svg class="bodies"><use xlink:href="#icon-body"></use></svg>
+                    </div>
+                    <svg class="hole" data-ctrl="HoleCtrl"><use xlink:href="#icon-hole"></use></svg>
+                    <svg class="hole-masks"><use xlink:href="#icon-hole-mask"></use></svg>
+                </div>
+                <div class='wrapper-hole'>
+                    <div class='paf'>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="pouf"><use xlink:href="#icon-pouf"></use></svg>
+                        <svg class="pif"><use xlink:href="#icon-pif"></use></svg>
+                        <svg class="paf-hats"><use xlink:href="#icon-paf-hat"></use></svg>
+                        <svg class="paf-hands"><use xlink:href="#icon-paf-hands"></use></svg>
+                    </div>
+                    <div class='lutin-game hide'>
+                        <svg class="hats"><use xlink:href="#icon-hat"></use></svg>
+                        <svg class="heads"><use xlink:href="#icon-dcosse"></use></svg>
+                        <svg class="bodies"><use xlink:href="#icon-body"></use></svg>
+                    </div>
+                    <svg class="hole" data-ctrl="HoleCtrl"><use xlink:href="#icon-hole"></use></svg>
+                    <svg class="hole-masks"><use xlink:href="#icon-hole-mask"></use></svg>
+                </div>
+                <div class='wrapper-hole'>
+                    <div class='paf'>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="pouf"><use xlink:href="#icon-pouf"></use></svg>
+                        <svg class="pif"><use xlink:href="#icon-pif"></use></svg>
+                        <svg class="paf-hats"><use xlink:href="#icon-paf-hat"></use></svg>
+                        <svg class="paf-hands"><use xlink:href="#icon-paf-hands"></use></svg>
+                    </div>
+                    <div class='lutin-game hide'>
+                        <svg class="hats"><use xlink:href="#icon-hat"></use></svg>
+                        <svg class="heads"><use xlink:href="#icon-dcosse"></use></svg>
+                        <svg class="bodies"><use xlink:href="#icon-body"></use></svg>
+                    </div>
+                    <svg class="hole" data-ctrl="HoleCtrl"><use xlink:href="#icon-hole"></use></svg>
+                    <svg class="hole-masks"><use xlink:href="#icon-hole-mask"></use></svg>
+                </div>
+                <div class='wrapper-hole'>
+                    <div class='paf'>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="stars"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="pouf"><use xlink:href="#icon-pouf"></use></svg>
+                        <svg class="pif"><use xlink:href="#icon-pif"></use></svg>
+                        <svg class="paf-hats"><use xlink:href="#icon-paf-hat"></use></svg>
+                        <svg class="paf-hands"><use xlink:href="#icon-paf-hands"></use></svg>
+                    </div>
+                    <div class='lutin-game hide'>
+                        <svg class="hats"><use xlink:href="#icon-hat"></use></svg>
+                        <svg class="heads"><use xlink:href="#icon-dcosse"></use></svg>
+                        <svg class="bodies"><use xlink:href="#icon-body"></use></svg>
+                    </div>
+                    <svg class="hole" data-ctrl="HoleCtrl"><use xlink:href="#icon-hole"></use></svg>
+                    <svg class="hole-masks"><use xlink:href="#icon-hole-mask"></use></svg>
+                </div>
+            </div>
+            <div id="popup" class="card-wrapper" data-ctrl="LutinPopupCtrl">
+                <div class='identity-card-wrapper'>
+                    <button class='button button--wired invert' id='prevLutin'>Lutin précédent</button>
+                    <div class="identity-card">
+                        <div class="lutin-full" data-ref="lutinPicture">
+                            <svg><use xlink:href='#icon-hat'></use></svg>
+                            <svg class='head-full'><use data-ref="lutinHead" xlink:href=''></use></svg>
+                            <svg><use xlink:href='#icon-body-full'></use></svg>
+                        </div>
+                        <div class='card-info'>
+                            <div class="card-info-hammered">Vous avez martelé <span class='card-info-name' data-ref="lutinName"></span></div>
+                            <div data-ref="lutinPosition"></div>
+                            <div  class="card-info-links" data-ref="resources"></div>
+                        </div>
+                    </div>
+                    <button class='button button--wired' id='nextLutin'>Lutin suivant</button>
+                </div>
+                <button class='button button--filled button--goBack' data-ref="goBackToGame">Reprendre</button>
+                <button id='play' class="button button--filled hide" data-ref="play">Jouer</button>
+            </div>
+        </div>
+        <div class="game-overlay" data-ctrl="StartOverlayCtrl">
+            <div class="game-overlay-title">Découvrez les lutins</div>
+            <div class="game-overlay-title-details">et attrapez les tous, si vous le pouvez...</div>
+            <div class="game-overlay-info">En cliquant vous authoriserez la page à s'afficher en plein écran</div>
+            <div class="game-overlay-buttons">
+                <button id='discover' class="button--wired inline">Voir les lutins</button>
+                <button id='play' class="button--wired inline">Faire une partie</button>
+            </div>
+        </div>
+        <div class="game-overlay hide" data-ctrl="GameOverOverlayCtrl">
+            <div class="game-overlay-title">Game Over</div>
+            <div class="game-overlay-title-details" data-ctrl="ScoreCtrl">Vous avez obtenu <span data-ref="scoreValue"></span> points !</div>
+            <div class="game-overlay-info"></div>
+            <div class="game-overlay-buttons">
+                <button id='discover' class="button--wired inline">Voir les lutins</button>
+                <button id='play' class="button--wired inline">Rejouer</button>
+            </div>
+        </div>
+    </div>
+    <section class='lutin-grid-head ref-head container'>
+        <h1 class='align-center'>Les lutins</h1>
+        <p class='align-center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptatem asperiores nesciunt hic minus similique atque possimus vitae culpa fugit reiciendis ducimus expedita modi at iste, deleniti, odit sit quo!</p>
+    </section>
+    <section class='lutin-grid container-small'>
+        <ul>
+            <li>
+                <div class='lutin-wrap'>
+                    <svg class='hat'><use xlink:href='#icon-hat'></use></svg>
+                    <svg class='head'><use xlink:href='#icon-athimel'></use></svg>
+                    <svg class='stand-body'><use xlink:href='#icon-body-full'></use></svg>
+                </div>
+                <div class='lutin-info'>
+                    <span class="lutin-name">Arnaud Thimel</span>
+                    <span class='poste'>Ingénieur développement</span>
+                </div>
+            </li>
+            <li>
+                <div class='lutin-wrap'>
+                    <svg class='hat'><use xlink:href='#icon-hat'></use></svg>
+                    <svg class='head'><use xlink:href='#icon-bpoussin'></use></svg>
+                    <svg class='stand-body'><use xlink:href='#icon-body-full'></use></svg>
+                </div>
+                <div class='lutin-info'>
+                    <span class="lutin-name">Benjamin Poussin</span>
+                    <span class='poste'>Ingénieur développement</span>
+                </div>
+            </li>
+            <li>
+                <div class='lutin-wrap'>
+                    <svg class='hat'><use xlink:href='#icon-hat'></use></svg>
+                    <svg class='head'><use xlink:href='#icon-bleny'></use></svg>
+                    <svg class='stand-body'><use xlink:href='#icon-body-full'></use></svg>
+                </div>
+                <div class='lutin-info'>
+                    <span class="lutin-name">Brendan Le Ny</span>
+                    <span class='poste'>Ingénieur développement</span>
+                </div>
+            </li>
+            <li>
+                <div class='lutin-wrap shead'>
+                    <svg class='hat'><use xlink:href='#icon-hat'></use></svg>
+                    <svg class='head'><use xlink:href='#icon-dcosse'></use></svg>
+                    <svg class='stand-body'><use xlink:href='#icon-body-full'></use></svg>
+                </div>
+                <div class='lutin-info'>
+                    <span class="lutin-name">David Cossé</span>
+                    <span class='poste'>Ingénieur développement</span>
+                </div>
+            </li>
+            <li>
+                <div class='lutin-wrap shead'>
+                    <svg class='hat'><use xlink:href='#icon-hat'></use></svg>
+                    <svg class='head'><use xlink:href='#icon-echatellier'></use></svg>
+                    <svg class='stand-body'><use xlink:href='#icon-body-full'></use></svg>
+                </div>
+                <div class='lutin-info'>
+                    <span class="lutin-name">Éric Chatellier</span>
+                    <span class='poste'>Ingénieur développement</spans>
+                </div>
+            </li>
+            <li>
+                <div class='lutin-wrap shead'>
+                    <svg class='hat'><use xlink:href='#icon-hat'></use></svg>
+                    <svg class='head'><use xlink:href='#icon-egendron'></use></svg>
+                    <svg class='stand-body'><use xlink:href='#icon-body-full'></use></svg>
+                </div>
+                <div class='lutin-info'>
+                    <span class="lutin-name">Estelle Gendron</span>
+                    <span class='poste'>Assistante de direction</span>
+                </div>
+            </li>
+            <li>
+                <div class='lutin-wrap'>
+                    <svg class='hat'><use xlink:href='#icon-hat'></use></svg>
+                    <svg class='head'><use xlink:href='#icon-jcouteau'></use></svg>
+                    <svg class='stand-body'><use xlink:href='#icon-body-full'></use></svg>
+                </div>
+                <div class='lutin-info'>
+                    <span class="lutin-name">Jean Couteau</span>
+                    <span class='poste'>Ingénieur commercial</span>
+                </div>
+            </li>
+            <li>
+                <div class='lutin-wrap shead'>
+                    <svg class='hat'><use xlink:href='#icon-hat'></use></svg>
+                    <svg class='head'><use xlink:href='#icon-jgaston'></use></svg>
+                    <svg class='stand-body'><use xlink:href='#icon-body-full'></use></svg>
+                </div>
+                <div class='lutin-info'>
+                    <span class="lutin-name">Julien Gaston</span>
+                    <span class='poste'>Ingénieur développement</span>
+                </div>
+            </li>
+            <li>
+                <div class='lutin-wrap'>
+                    <svg class='hat'><use xlink:href='#icon-hat'></use></svg>
+                    <svg class='head'><use xlink:href='#icon-jruchaud'></use></svg>
+                    <svg class='stand-body'><use xlink:href='#icon-body-full'></use></svg>
+                </div>
+                <div class='lutin-info'>
+                    <span class="lutin-name">Julien Ruchaud</span>
+                    <span class='poste'>Ingénieur développement</span>
+                </div>
+            </li>
+            <li>
+                <div class='lutin-wrap'>
+                    <svg class='hat'><use xlink:href='#icon-hat'></use></svg>
+                    <svg class='head'><use xlink:href='#icon-ymartel'></use></svg>
+                    <svg class='stand-body'><use xlink:href='#icon-body-full'></use></svg>
+                </div>
+                <div class='lutin-info'>
+                    <span class="lutin-name">Yannick Martel</span>
+                    <span class='poste'>Président - Ingénieur développement</span>
+                </div>
+            </li>
+            <li>
+                <div class='lutin-wrap'>
+                    <svg class='hat'><use xlink:href='#icon-hat'></use></svg>
+                    <svg class='head'><use xlink:href='#icon-kmorin'></use></svg>
+                    <svg class='stand-body'><use xlink:href='#icon-body-full'></use></svg>
+                </div>
+                <div class='lutin-info'>
+                    <span class="lutin-name">Kevin Morin</span>
+                    <span class='poste'>Ingénieur développement</span>
+                </div>
+            </li>
+            <li>
+                <div class='lutin-wrap'>
+                    <svg class='hat'><use xlink:href='#icon-hat'></use></svg>
+                    <svg class='head'><use xlink:href='#icon-lkaufmann'></use></svg>
+                    <svg class='stand-body'><use xlink:href='#icon-body-full'></use></svg>
+                </div>
+                <div class='lutin-info'>
+                    <span class="lutin-name">Léo Kaufmann</span>
+                    <span class='poste'>Assistant à la maîtrise d'ouvrage</span>
+                </div>
+            </li>
+            <li>
+                <div class='lutin-wrap'>
+                    <svg class='hat'><use xlink:href='#icon-hat'></use></svg>
+                    <svg class='head'><use xlink:href='#icon-sbavencoff'></use></svg>
+                    <svg class='stand-body'><use xlink:href='#icon-body-full'></use></svg>
+                </div>
+                <div class='lutin-info'>
+                    <span class="lutin-name">Sylvain Bavencoff</span>
+                    <span class='poste'>Ingénieur développement</span>
+                </div>
+            </li>
+            <li>
+                <div class='lutin-wrap shead'>
+                    <svg class='hat'><use xlink:href='#icon-hat'></use></svg>
+                    <svg class='head'><use xlink:href='#icon-smaisonneuve'></use></svg>
+                    <svg class='stand-body'><use xlink:href='#icon-body-full'></use></svg>
+                </div>
+                <div class='lutin-info'>
+                    <span class="lutin-name">Samuel Maisonneuve</span>
+                    <span class='poste'>Ingénieur développement</span>
+                </div>
+            </li>
+        </ul>
+    </section>
+{% endblock content %}

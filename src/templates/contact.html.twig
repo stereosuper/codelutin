@@ -1,0 +1,60 @@
+{% extends 'layout/layout.html.twig' %}
+{% block content %}
+<section class='ref-head container'>
+    <h1 class='align-center'>Contactez-nous !</h1>
+    <p class='align-center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptatem asperiores nesciunt hic minus similique atque possimus vitae culpa fugit reiciendis ducimus expedita modi at iste, deleniti, odit sit quo!</p>
+</section>
+<section class='container-small'>
+    <form action="">
+        <div class='group-field'>
+            <div class='line'>
+                <span>
+                    <label for="inputT">Nom</label>
+                    <input type="text" name="" id="inputT" placeholder='Nom'>
+                </span>
+                <span>
+                    <label for="inputT2">Prénom</label>
+                    <input type="text" name="" id="inputT2" placeholder='Prénom'>
+                </span>
+            </div>
+
+            
+            <label for="inputM">E-mail</label>
+            <input type="email" name="" id="inputM" placeholder='toto@email.fr'>
+            <label for="inputP">Mot de passe</label>
+            <input class='small' type="password" name="" id="inputP" placeholder='Password'>
+        </div>
+        <div class='group-field'>
+            <label for="select1">Votre pays</label>
+            <div class='select'>
+                <select name="" id="select1">
+                    <option value="1">France</option>
+                    <option value="1">UK</option>
+                    <option value="1">United States</option>
+                    <option value="1">Russia</option>
+                </select>
+            </div>
+        </div>
+
+        <div class='group-field'>
+            <label>Sexe : </label>
+            <div class='line'>
+                <input type="radio" id="genderChoice1" name="gender" value="male">
+                <label for="genderChoice1">Homme</label>
+                <input type="radio" id="genderChoice2" name="gender" value="female">
+                <label for="genderChoice2">Femme</label>
+            </div>
+
+        </div>
+
+        <div class='group-field'>
+            <label for="textA">Votre message</label>
+            <textarea name="" id="textA" cols="30" rows="10" placeholder='Type your message...'></textarea>
+            <input id='check' type="checkbox" name="" >
+            <label for="check">J'aime les lutins</label>
+        </div>
+        
+        <button class='btn-primary btn-icon' type="submit"><svg class="icon icon-arrow"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg>Envoyer</button>
+    </form>
+</section>
+{% endblock %}

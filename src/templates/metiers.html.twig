@@ -1,0 +1,69 @@
+{% extends 'layout/layout.html.twig' %}
+
+{% block body_attr %}class='page-metiers'{% endblock %}
+
+{% block content %}
+    <section class='ref-head container'>
+        <h1 class='align-center small-ls'>Nos Métiers</h1>
+        <p class='align-center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptatem asperiores nesciunt hic minus similique atque possimus vitae culpa fugit reiciendis ducimus expedita modi at iste, deleniti, odit sit quo!</p>
+    </section>
+
+    <section class='metiers-list container'>
+        <ul>
+            <li class='srMetier'>
+                <div class='metier-img'>
+                    <svg class=''><use xlink:href='#icon-developpement'></use></svg>
+                </div>
+                <div class='metier-content'>
+                    <h3 class='alt'>Développement</h3>
+                    <p>
+                        Le développement au forfait de logiciels ou de briques logicielles libres. Code Lutin est spécialiste des technologies Java JEE et XML pour le traitement et la publication d'information.
+                    </p>
+                </div>
+            </li>
+            <li class='srMetier'>
+                <div class='metier-img'>
+                    <svg class=''><use xlink:href='#icon-support'></use></svg>
+                </div>
+                <div class='metier-content'>
+                    <h3 class='alt'>Support & maintenance</h3>
+                    <p>
+                        Le support technique de solutions libres, le monitorat de formation, l'accompagnement au développement, l'assistance.
+                    </p>
+                </div>
+            </li>
+            <li class='srMetier'>
+                <div class='metier-img'>
+                    <svg class=''><use xlink:href='#icon-formation'></use></svg>
+                </div>
+                <div class='metier-content'>
+                    <h3 class='alt'>Formation</h3>
+                    <p>
+                        La formation aux technologies Java, aux techniques de développement industrielles et agiles (intégration continue, méthodes agiles,...)
+                    </p>
+                </div>
+            </li>
+            <li class='srMetier'>
+                <div class='metier-img'>
+                    <svg class=''><use xlink:href='#icon-conseil'></use></svg>
+                </div>
+                <div class='metier-content'>
+                    <h3 class='alt'>Conseil & veille technologique</h3>
+                    <p>
+                        Développement d'un portail extranet de gestion de la marque NFLogement (HPE, THPE, BBC Effinergie). Ce portail est utilisé pour mettre en relations, les clients, les sous-traitants et Cerqual et orchestrer ...
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class='techno'>
+        <div class='container'>
+            <p>Java, XML, Html, css ...</p>
+            <h3>Les technologies que nous utilisons</h3>
+            <a href="#" class='btn-secondary btn-icon brown'><svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>En savoir plus</a>
+        </div>
+    </section>
+    
+{% endblock content %}
+
+

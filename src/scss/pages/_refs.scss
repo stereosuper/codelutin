@@ -1,0 +1,241 @@
+.ref-head{
+    padding: 210px 40px 0;
+    h1 {
+        margin: 0 0 0.8em;
+    }
+    > p{
+        max-width: 700px;
+        margin: 1em auto;
+    }
+}
+
+.refs{
+    padding: 0 25px;
+}
+
+.ref-grid{
+    display: flex;
+    width: calc(100% + 20px);
+    margin: 70px 0 0 -10px;
+    > ul {
+        width: calc(50% - 20px);
+        margin: 0 10px;
+        padding-left: 0;
+        > li {
+            position: relative;
+            height: 270px;
+            margin: 0 0 25px;
+            border-radius: 3px;
+            background-size: cover;
+            background-position: center;
+            > a {
+                height: 100%;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+            }
+            &:before{
+                content: none;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 10px;
+                right: 10px;
+                border-radius: 3px;
+                z-index: -1;
+                background: #d9d9d9;
+            }
+            &:hover{
+                .ref-content{
+                    > .hide-title {
+                        max-height: 200px;
+                    }
+                }
+                .mask-color{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .c1{
+        li {
+            &:nth-child(odd){
+                height: 560px;
+            }
+        }
+    }
+    .c2{
+        li {
+            &:after{
+                left: 10px;
+            }
+            &:nth-child(even){
+                height: 560px;
+            }
+        }
+    }
+    .mask{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        .ie & {
+            opacity: 0.6;
+            mix-blend-mode: normal;
+        }
+        mix-blend-mode: multiply;
+    }
+    .mask-color{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        z-index: 2;
+        transition: $transition;
+    }
+}
+
+.ref-content{
+    position: relative;
+    padding: 0 80px;
+    color: $white;
+    z-index: 3;
+    h2 {
+        font-family: $roboto;
+        margin: 0;
+        font-size: 6rem;
+        text-transform: uppercase;
+    }
+    .hide-title{
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+    }
+
+    > span {
+        display: block;
+        font-family: $roboto;
+        font-size: 1.8rem;
+        &.ref-subtitle{
+            font-size: 2.4rem;
+            font-family: $roboto-light-italic;
+        }
+    }
+    .btn-secondary{
+        display: inline-block;
+        margin: 10px 0 0;
+        transform: translateX(0);
+        svg {
+            transition: $transition;
+        }
+        &:hover, &:focus{
+            svg {
+                transform: translateX(7px);
+            }
+        }
+    }
+
+}
+
+.ref-clients{
+    > p {
+        max-width: 700px;
+        margin: 1em auto;
+    }
+    .client-grid{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 45px 0 0;
+        padding-left: 0;
+        img {
+            max-height: 95px;
+            width: auto;
+            max-width: 110px;
+        }
+        > li {
+            width: 16.66%;
+            min-width: 180px;
+            margin: 0 0 45px;
+            text-align: center;
+            &:before{
+                content: none;
+            }
+        }
+    }
+}
+
+@media (max-width: $desktop-small){
+    .ref-head{
+        padding: 150px 40px 0;
+    }
+    .ref-grid{
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+        > ul {
+            width: 100%;
+            margin: 0;
+            > li {
+                &:after{
+                    width: auto;
+                    top: 10px;
+                    right: 10px;
+                    left: 10px;
+                }
+            }
+        }
+        .c1{
+            li {
+                &:nth-child(odd) {
+                    height: 400px;
+                }
+            }
+        }
+        .c2{
+             li {
+                &:nth-child(odd) {
+                    height: 400px;
+                }
+                &:nth-child(even) {
+                    height: 270px;
+                }
+            }
+        } 
+    }
+    .ref-content{
+        padding: 0 40px;
+        h2 {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media (max-width: $desktop-small){
+    .ref-content{
+        .hide-title{
+            max-height: none;
+        }
+    }
+}
+
+@media (max-width: $phone){
+    .ref-clients{
+        .client-grid{
+            img {
+                max-width: 70%;
+            }
+            > li {
+                width: 50%;
+                min-width: 0;
+            }
+        }
+    }
+}

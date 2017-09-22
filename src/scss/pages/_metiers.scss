@@ -1,0 +1,133 @@
+.page-metiers{
+    #main {
+        padding: 0;
+    }
+}
+.metiers-list{
+    ul {
+        margin: 70px 0;
+        padding-left: 0;
+        > li {
+            display: flex;
+            width: 65%;
+            margin: 100px 0;
+            .metier-img{
+                width: 50%;
+                padding: 0 55px 0 0;
+                > svg {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            .metier-content{
+                width: 50%;
+                > p {
+                    hyphens: auto;
+                    font-size: 1.4rem;
+                }
+            }
+            &:nth-child(even){
+                margin-left: 35%;
+                text-align: right;
+                .metier-content{
+                    order: 1;
+                }
+                .metier-img{
+                    order: 2;
+                    padding: 0 0 0 55px;
+                }
+            }
+            &:before{
+                content: none;
+            }
+        } 
+    }
+}
+
+.techno {
+    padding: 100px 0;
+    background: $beige;
+    h3 {
+        text-align: center;
+        margin: 15px 0 25px;
+    }
+    p {
+        margin: 0;
+    }
+    > .container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .btn-secondary{
+            background: transparent;
+            &:hover, &:focus{
+                background: $brown;
+            }
+        }
+    }
+}
+
+@media (max-width: $desktop){
+    .metiers-list{
+        ul {
+            > li {
+                width: 100%;
+                .metier-img{
+                    width: 30%;
+                }
+                .metier-content{
+                    width: 70%;
+                }
+                &:nth-child(even){
+                    margin-left: 0;
+                }
+            } 
+        }
+    }
+}
+
+@media (max-width: $tablet){
+    .metiers-list{
+        ul {
+            > li {
+                .metier-img{
+                    width: 40%;
+                }
+                .metier-content{
+                    width: 60%;
+                }
+            } 
+        }
+    }
+}
+
+@media (max-width: $phone){
+    .metiers-list{
+        ul {
+            > li {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin: 60px 0;
+                &:nth-child(even){
+                    text-align: center;
+                    .metier-img{
+                        order: 1;
+                        padding: 0;
+                    }
+                }
+                .metier-img{
+                    order: 1;
+                    width: 100%;
+                    max-width: 250px;
+                    padding: 0;
+                    margin: 25px 0 0;
+                }
+                .metier-content{
+                    order: 2;
+                    width: 100%;
+                }
+            } 
+        }
+    }
+}

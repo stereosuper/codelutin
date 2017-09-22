@@ -1,0 +1,25 @@
+.hole {
+    max-width: 100%;
+    height: 53px;
+    width: 130px;
+}
+
+.row-hole{
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    padding-bottom: 20px;
+    &:nth-child(even){
+        margin: 0px 10%;
+    }
+}
+
+.hole-masks{
+    pointer-events: none;
+    position: absolute;
+    bottom: -54px;
+    left: -28px;
+    width: 188px;
+    height: 150px;
+    z-index: 3;
+}

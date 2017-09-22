@@ -1,0 +1,138 @@
+module.exports = {
+    team: ["bpoussin", "egendron", "athimel", "jruchaud", "echatellier", "ymartel", "jcouteau", "kmorin", "bleny", "lkaufmann", "dcosse", "sbavencoff", "smaisonneuve", "jgaston"],
+    president: "ymartel",
+    ymartel: {
+        firstName: "Yannick",
+        lastName: "Martel",
+        position: "Ingénieur développement",
+        resources: [{
+            label: "Github",
+            href: "https://github.com/ChtiDkois"
+        }],
+        fondOf: ["JAVA", "Groovy"],
+        smallHead: false
+    },
+    dcosse: {
+        firstName: "David",
+        lastName: "Cosse",
+        position: "Ingénieur développement",
+        fondOf: ["JAVA", "Groovy"],
+        smallHead: true
+    },
+    echatellier: {
+        firstName: "Éric",
+        lastName: "Chatellier",
+        position: "Ingénieur développement",
+        resources: [{
+            label: "Github",
+            href: "https://github.com/chatellier"
+        }],
+        fondOf: ["JAVA", "Groovy"],
+        smallHead: true
+    },
+    egendron: {
+        firstName: "Estelle",
+        lastName: "Gendron",
+        position: "Assistante de direction",
+        fondOf: ["JAVA", "Groovy"],
+        smallHead: true
+    },
+    jgaston: {
+        firstName: "Julien",
+        lastName: "Gaston",
+        position: "Ingénieur développement",
+        fondOf: ["JAVA", "Groovy"],
+        smallHead: true
+    },
+    smaisonneuve: {
+        firstName: "Samuel",
+        lastName: "Maisonneuve",
+        position: "Ingénieur développement",
+        resources: [{
+            label: "Github",
+            href: "https://github.com/Heliodromel"
+        }],
+        fondOf: ["JAVA", "Groovy"],
+        smallHead: true
+    },
+    bpoussin: {
+        firstName: "Benjamin",
+        lastName: "Poussin",
+        position: "Ingénieur développement",
+        resources: [{
+            label: "Github",
+            href: "https://github.com/bpoussin"
+        }],
+        fondOf: ["JAVA", "Groovy"],
+        smallHead: false
+    },
+    athimel: {
+        firstName: "Arnaud",
+        lastName: "Thimel",
+        position: "Ingénieur développement",
+        resources: [{
+            label: "Github",
+            href: "https://github.com/athimel"
+        }],
+        fondOf: ["JAVA", "Groovy"],
+        smallHead: false
+    },
+    jruchaud: {
+        firstName: "Julien",
+        lastName: "Ruchaud",
+        position: "Ingénieur développement",
+        resources: [{
+            label: "Github",
+            href: "https://github.com/jruchaud"
+        }],
+        fondOf: ["JAVA", "Groovy"],
+        smallHead: false
+    },
+    jcouteau: {
+        firstName: "Jean",
+        lastName: "Couteau",
+        position: "Ingénieur commercial",
+        resources: [{
+            label: "Github",
+            href: "https://github.com/kootox"
+        }],
+        fondOf: ["JAVA", "Groovy"],
+        smallHead: false
+    },
+    kmorin: {
+        firstName: "Kevin",
+        lastName: "Morin",
+        position: "Ingénieur développement",
+        resources: [{
+            label: "Github",
+            href: "https://github.com/ironAss"
+        }],
+        fondOf: ["JAVA", "Groovy"],
+        smallHead: false
+    },
+    bleny: {
+        firstName: "Brendan",
+        lastName: "Le Ny",
+        position: "Ingénieur développement",
+        resources: [{
+            label: "Github",
+            href: "https://github.com/numero-six"
+        }],
+        fondOf: ["JAVA", "Groovy"],
+        smallHead: false
+    },
+    lkaufmann: {
+        firstName: "Léo",
+        lastName: "Kaufmann",
+        position: "Assistant à la maîtrise d'ouvrage",
+        fondOf: ["JAVA", "Groovy"],
+        smallHead: false
+    },
+    sbavencoff: {
+        firstName: "Sylvain",
+        lastName: "Bavencoff",
+        position: "Ingénieur développement",
+        fondOf: ["JAVA", "Groovy"],
+        smallHead: false
+    },
+}
